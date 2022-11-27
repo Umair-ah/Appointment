@@ -1,0 +1,19 @@
+<h2>List Of Bookings</h2>
+<% @bookings.each do |booking| %>
+    <p>
+    <b>Start:</b> <%= booking.start %>
+    </p>
+
+    <p>
+    <b>End:</b> <%= booking.end %>
+    </p>
+    
+    <p>
+    <b>Purpose:</b> <%= booking.purpose %>
+    </p>
+
+    <p>
+    <b>Room:</b> <%= link_to booking.room.name, booking.room %>
+    </p>
+<% end %>
+<%= link_to 'Create Booking', new_booking_path %>
